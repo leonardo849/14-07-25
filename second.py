@@ -7,8 +7,10 @@ while True:
     price = 0
     discount = 1
     finalPrice = 0
-    if categories.index(kindOfTicket) == -1:
-        continue
+    while kindOfTicket not in categories:
+        print("wtf are you sending me bro?")
+        kindOfTicket = input("what kind of ticket do you want?").upper()
+        
 
     if age < 18 or age >= 60:
         discount = 0.5
